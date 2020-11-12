@@ -31,14 +31,17 @@ html, body, #viewDiv{
         var myscene = new SceneView({
             map: mywebmap,
             container: "viewDiv"
-});
-        myscene.goTo({
-            center:[-116,44],
+            camera: {
+            position: {
+            x: -120.5,
+            y: 37,
+            z: 450000},
+            
             heading: 35,
+            
             tilt: 60,
-            zoom: 7
+            }
 });
-        // My Map does not have a tilt like in the picture on the lab, I'm assuming that this could be due to new versions? I triple checked to make sure that I had the correct values and put the goTo tag in the correct location..
 });
 </script>
 </head>
